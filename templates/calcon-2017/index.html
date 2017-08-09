@@ -1,0 +1,28 @@
+{% extends 'calcon-2017/base.html' %}
+
+{% block title %}Plains to Peaks Collective: Increasing access to your unique
+    heritage through the Digital Public Library of America{% endblock %} 
+
+{% block main %}
+
+<div class="py2 txt--center" style="background: url('{{ url_for('static', filename='imgs/calcon-background.png') }}') no-repeat">
+    <h1 class="h2">Plains to Peaks Collective:</h1>
+    <p class="h4">Increasing access to your unique
+        heritage through <a href="https://dp.la">DPLA</a>
+    </p>
+</div>
+<div class="grd p2">
+    <div class="grd-row">
+        <section class="grd-row-col-1-6">
+            <h3 class="h3 {% if request.path.endswith('background.html')%}bg--mid-gray{% endif %}"><a href="#" class="p2p-background head-link">Background</a></h3>
+            <h3 class="h3"><a href="#" class="p2p-pilot head-link">Pilot</a></h3>
+            <h3 class="h3"><a href="#" class="p2p-dpla head-link">DP.LA</a></h3>
+            <h3 class="h3"><a href="#" class="p2p-join head-link">Join</a></h3>
+            <h3 class="h3"><a href="#" class="p2p-more-info head-link">More &hellip;</a></h3>
+
+        </section>
+    </div>
+</div>
+{% endblock %}
+
+
