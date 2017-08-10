@@ -6,6 +6,10 @@ h1, h2 {
     text-decoration: none;
 }
 
+.p2p-active {
+    background-color: black;
+}
+
 .p2p-background {
     color: #A761A9;
 }

@@ -12,6 +12,36 @@
 
 </head>
 <body class="container">
-    {% block nav %}{% endblock %}
+{% block header %}
+    <div class="row" style="background: url('{{ url_for('static', filename='imgs/calcon-background.png') }}') no-repeat">
+    <section class="column column-100">
+        <h1 style="text-align: right;">Plains to Peaks Collective:</h1>
+        <h2 style="text-align: right;">
+            Increasing access to your unique digital<br>
+            heritage through <a href="https://dp.la">DPLA</a>
+        </h2>
+    </section>
+    </div>
+{% endblock header %}
+    <div class="row">
+        <section class="column column-25">
+        {% block nav %}
+            <h3 class="{% if 'background' in request.path %}p2p-active{% endif %}">
+                <a href="{{ url_for('page', name='background') }}" class="p2p-background head-link">Background</a>
+            </h3>
+            <h3 class="{% if 'pilot' in request.path %}p2p-active{% endif %}">
+                <a href="{{ url_for('page', name='pilot') }}" class="p2p-pilot head-link">Pilot</a>
+            </h3>
+            <h3 class="{% if 'dpla' in request.path %}p2p-active{% endif %}">
+                <a href="{{ url_for('page', name='dpla') }}" class="p2p-dpla head-link">DP.LA</a>
+            </h3>
+            <h3 class="{% if 'join' in request.path %}p2p-active{% endif %}">
+                <a href="{{ url_for('page', name='join') }}" class="p2p-join head-link">Join</a>
+            </h3>
+            <h3 class="{% if 'more' in request.path %}p2p-active{% endif %}">
+                <a href="{{ url_for('page', name='more') }}" class="p2p-more-info head-link">More &hellip;</a></h3>
+        {% endblock %}
+     </section>
+ 
     {% block main %}{% endblock %}
 </body>
