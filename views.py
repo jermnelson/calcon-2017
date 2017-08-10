@@ -5,8 +5,7 @@ from app import app
 
 @app.route("/background")
 def background():
-    return render_template("calcon-2017/content.html",
-        title="Background on Project")
+    return render_template("calcon-2017/background.html")
         
 
 @app.route("/")

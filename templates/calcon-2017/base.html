@@ -6,12 +6,12 @@
     <title>CALCON 2017 - {% block title %}{% endblock %}</title>
     <meta name="author" content="Jeremy Nelson">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A forward-thinking, CSS micro-framework. Minimal by design.">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/furtive.min.css') }}">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/milligram.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
 
 </head>
-<body>
+<body class="container">
     {% block nav %}{% endblock %}
     {% block main %}{% endblock %}
 </body>
