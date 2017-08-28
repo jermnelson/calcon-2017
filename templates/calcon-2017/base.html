@@ -1,47 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <head>
     <meta charset="utf-8">
-    <title>CALCON 2017 - {% block title %}{% endblock %}</title>
-    <meta name="author" content="Jeremy Nelson">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/milligram.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+    <meta name="author" content="Jeremy Nelson, Leigh">
+    <link rel="icon" href="../../../../favicon.ico">
 
-</head>
-<body class="container">
-{% block header %}
-    <div class="row" style="background: url('{{ url_for('static', filename='imgs/calcon-background.png') }}') no-repeat">
-    <section class="column column-100">
-        <h1 style="text-align: right;">Plains to Peaks Collective:</h1>
-        <h2 style="text-align: right;">
-            Increasing access to your unique digital<br>
-            heritage through <a href="https://dp.la">DPLA</a>
-        </h2>
-    </section>
-    </div>
-{% endblock header %}
-    <div class="row">
-        <section class="column column-25">
-        {% block nav %}
-            <h3 class="{% if 'background' in request.path %}p2p-active{% endif %}">
-                <a href="{{ url_for('page', name='background') }}" class="p2p-background head-link">Background</a>
-            </h3>
-            <h3 class="{% if 'pilot' in request.path %}p2p-active{% endif %}">
-                <a href="{{ url_for('page', name='pilot') }}" class="p2p-pilot head-link">Pilot</a>
-            </h3>
-            <h3 class="{% if 'dpla' in request.path %}p2p-active{% endif %}">
-                <a href="{{ url_for('page', name='dpla') }}" class="p2p-dpla head-link">DP.LA</a>
-            </h3>
-            <h3 class="{% if 'join' in request.path %}p2p-active{% endif %}">
-                <a href="{{ url_for('page', name='join') }}" class="p2p-join head-link">Join</a>
-            </h3>
-            <h3 class="{% if 'more' in request.path %}p2p-active{% endif %}">
-                <a href="{{ url_for('page', name='more') }}" class="p2p-more-info head-link">More &hellip;</a></h3>
-        {% endblock %}
-     </section>
- 
-    {% block main %}{% endblock %}
-</body>
+    <title>CALCON 2017 - Plains2Peaks DP.LA Service Hub {% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename="css/bootstrap.min.css") }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename="css/narrow-jumbotron.css") }}" rel="stylesheet">
+  </head>
+
+  <body>
+    {% block header %}
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Join</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">CALCON 2017</h3>
+      </div>
+    {% endblock %}
+    {% block main %}
+      <div class="jumbotron">
+        <h1 class="display-3">Jumbotron heading</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+      </div>
+    {% endblock %}
+    {% block footer %}
+      <footer class="footer">
+        <p>&copy; Jeremy Nelson 2017</p>
+      </footer>
+    {% endblock %}
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  </body>
+</html>
