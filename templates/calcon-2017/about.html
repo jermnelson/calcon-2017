@@ -1,0 +1,14 @@
+{% extends 'calcon-2017/base.html' %}
+
+{% block main %}
+<div class="container">
+    <h1>About Plains2Peaks.org</h1>
+
+    <h2>Participating Institutions</h2>
+    <ul>
+    {% for page in pages %}
+        <li>{{ page.meta.title }}</li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

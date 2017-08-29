@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Jeremy Nelson, Leigh">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <title>CALCON 2017 - Plains2Peaks DP.LA Service Hub {% block title %}{% endblock %}</title>
 
@@ -14,6 +14,18 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename="css/narrow-jumbotron.css") }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename="css/font-awesome.min.css") }}" rel="stylesheet">
+    <style>
+        .calcon-bkgrd {
+            color: #374A95 !important;
+            background-image: url('{{ url_for('static', filename='imgs/calcon-background.png') }}') ;
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            font-weight: 700;
+        }
+    </style>
+
   </head>
 
   <body>
@@ -23,17 +35,17 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link {% if request.path.endswith("/") %}active{% endif %}" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link {% if request.path.endswith("about") %}active{% endif %}" href="{{ url_for('about') }}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Join</a>
+              <a class="nav-link {% if request.path.endswith("join") %}active{% endif %}" href="{{ url_for('join') }}">Join</a>
             </li>
           </ul>
         </nav>
-        <h3 class="text-muted">CALCON 2017</h3>
+        <h3 class="calcon-bkgrd"><a style="color: #374A95" href="http://cal-webs.wixsite.com/calcon17">CALCON 2017</a></h3>
       </div>
     {% endblock %}
     {% block main %}
