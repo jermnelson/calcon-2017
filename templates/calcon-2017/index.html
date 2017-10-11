@@ -3,19 +3,25 @@
 {% block title %}Plains to Peaks Collective: Increasing access to your unique
     heritage through the Digital Public Library of America{% endblock %} 
 
+{% block header %}{% endblock %}
+
 {% block main %}
-<div class="jumbotron">
-    <img src="{{ url_for('static', filename='imgs/plains2peaks-tmp-logo.png') }}" class="float-left" alt="Temporary Plains2Peaks.org Logo">
-    <h3>October 12<sup>th</sup>, 2017</h3>
-    <h1 class="display-3">Plains to Peaks Collective:</h1>
-    <h2>Increasing access to your unique digital<br>
-        heritage through <a href="https://dp.la">DPLA</a></h2>
+<div class="container">
+    <div class="jumbotron">
+        <h3>October 12<sup>th</sup>, 2017</h3>
+        <img src="{{ url_for('static', filename='imgs/plains2peaks-logo.png') }}" 
+             alt="Plains2Peaks.org Logo">
 
-     <p class="lead">State Library of Colorado sponsors a regional DP.LA service 
-        hub for the libraries, museums, and other
-        cultural heritages institutions in Colorado and Wyoming.</p>
-
-    <a class="btn btn-lg btn-success" href="{{ url_for('about') }}" 
-       role="button">About <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+        <h2>Increasing access to your unique digital<br>
+            heritage through <a href="https://dp.la">DPLA</a></h2>
+        {#<object data="{{ url_for('static', filename='pdf/PPC.CALCON.2017.pdf') }}" type="application/pdf" 
+                width="100%" height="400px">
+            
+        </object>#}
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQs_xG47r86Ia6teFnPrHqCwnwdjVCaIMDP754DPxLGI7M-vrX9jiyukNJ-VQWLLNc9YWu66LJOMmHX/embed?start=false&loop=false&delayms=5000" 
+            frameborder="0" 
+            width="100%" 
+            height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
 </div>
 {% endblock %}
